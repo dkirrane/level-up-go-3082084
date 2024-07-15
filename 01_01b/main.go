@@ -19,7 +19,8 @@ func parseTime(target string) time.Time {
 
 // calcSleeps returns the number of sleeps until the target.
 func calcSleeps(target time.Time) float64 {
-	panic("NOT IMPLEMENTED")
+	duration := time.Until(target)
+	return duration.Hours()/24
 }
 
 func main() {
